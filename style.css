@@ -1,0 +1,562 @@
+/* ============================================================
+   NZ Tech Expo 2026 — Custom Slidev Theme
+   Brand: black bg · neon lime · hot magenta · bold white text
+   ============================================================ */
+
+:root {
+  --nz-black:    #0a0a0a;
+  --nz-darkbg:   #0f1a0f;
+  --nz-green:    #4afe1e;
+  --nz-magenta:  #e91e8c;
+  --nz-white:    #ffffff;
+  --nz-grey:     #a0a0a0;
+  --nz-border:   #1f2e1f;
+}
+
+/* ── Base slide ──────────────────────────────────────────── */
+.slidev-layout {
+  background-color: var(--nz-black) !important;
+  color: var(--nz-white) !important;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+/* ── Headings ────────────────────────────────────────────── */
+.slidev-layout h1 {
+  color: var(--nz-white) !important;
+  font-weight: 900 !important;
+  font-size: 2.8rem !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.slidev-layout.cover h1 {
+  text-transform: none !important;
+}
+
+.slidev-layout h2 {
+  color: var(--nz-green) !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.slidev-layout h3 {
+  color: var(--nz-magenta) !important;
+  font-weight: 700 !important;
+}
+
+/* ── Body text ───────────────────────────────────────────── */
+.slidev-layout p,
+.slidev-layout li {
+  color: #d0d0d0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ── Bold / strong  ──────────────────────────────────────── */
+.slidev-layout strong {
+  color: var(--nz-green) !important;
+  font-weight: 800;
+}
+
+/* ── Emphasis / italic ───────────────────────────────────── */
+.slidev-layout em {
+  color: var(--nz-grey);
+  font-style: normal;
+}
+
+/* ── Blockquote ──────────────────────────────────────────── */
+.slidev-layout blockquote {
+  border-left: 4px solid var(--nz-magenta) !important;
+  background: rgba(233, 30, 140, 0.07) !important;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 0 6px 6px 0;
+  color: #e0e0e0 !important;
+  margin: 1rem 0;
+}
+
+.slidev-layout blockquote p {
+  color: #e0e0e0 !important;
+  margin: 0;
+}
+
+/* ── Tables ──────────────────────────────────────────────── */
+.slidev-layout table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.slidev-layout thead tr {
+  background: var(--nz-darkbg);
+  border-bottom: 2px solid var(--nz-green);
+}
+
+.slidev-layout th {
+  color: var(--nz-green) !important;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.slidev-layout td {
+  color: #d0d0d0;
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--nz-border);
+}
+
+.slidev-layout tr:hover td {
+  background: rgba(74, 254, 30, 0.05);
+}
+
+/* ── Code blocks ─────────────────────────────────────────── */
+.slidev-layout pre {
+  background: #0d1a0d !important;
+  border: 1px solid var(--nz-border);
+  border-radius: 8px;
+  font-size: 0.78rem !important;
+}
+
+.slidev-layout code:not(pre code) {
+  background: rgba(74, 254, 30, 0.12);
+  color: var(--nz-green);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ── Links ───────────────────────────────────────────────── */
+.slidev-layout a {
+  color: var(--nz-green) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Slide number ────────────────────────────────────────── */
+.slidev-page-number {
+  color: var(--nz-grey) !important;
+}
+
+/* ── Logo in bottom-right corner ─────────────────────────── */
+.nz-logo {
+  position: fixed;
+  bottom: 18px;
+  right: 24px;
+  width: 140px;
+  opacity: 0.85;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* ── Cover slide special layout ─────────────────────────── */
+.slidev-layout.cover,
+.slidev-layout.intro {
+  background: linear-gradient(135deg, #0a0a0a 0%, #0d1a0d 60%, #0a0a0a 100%) !important;
+}
+
+.slidev-layout.cover h1 {
+  font-size: 3.5rem !important;
+  text-shadow: 0 0 40px rgba(74, 254, 30, 0.3);
+}
+
+.slidev-layout.cover h2 {
+  font-size: 1.2rem !important;
+  color: var(--nz-magenta) !important;
+  letter-spacing: 0.12em;
+}
+
+/* ── Neon green accent bar at top ────────────────────────── */
+.slidev-layout::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--nz-green) 0%, var(--nz-magenta) 100%);
+  z-index: 200;
+}
+
+/* ── 5-Layer Cake slide ──────────────────────────────────── */
+.cake-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0.5rem 0;
+}
+
+.cake-row {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.cake-row.active {
+  background: #0d2e0d;
+  border: 1px solid #4afe1e;
+}
+
+.cake-row.dim {
+  background: #141414;
+  border: 1px solid #333;
+}
+
+.cake-layer {
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cake-row.active .cake-layer {
+  color: #4afe1e;
+}
+
+.cake-row.dim .cake-layer {
+  color: #555;
+}
+
+.cake-desc {
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.cake-row.active .cake-desc {
+  color: #b0d0b0;
+}
+
+.cake-row.dim .cake-desc {
+  color: #444;
+}
+
+.cake-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #e91e8c;
+  white-space: nowrap;
+  background: rgba(233, 30, 140, 0.1);
+  border: 1px solid #e91e8c;
+  border-radius: 20px;
+  padding: 3px 10px;
+  min-width: 130px;
+  text-align: center;
+}
+
+.cake-tag:empty {
+  background: transparent;
+  border-color: transparent;
+}
+
+/* ── Hero cards (owning infra slide) ─────────────────────── */
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 1rem 0 0.8rem;
+}
+
+.hero-card {
+  background: #0d1a0d;
+  border: 1px solid #1f3a1f;
+  border-top: 3px solid #4afe1e;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.hero-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero-sub {
+  font-size: 0.78rem;
+  color: #e91e8c;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-bullets li {
+  font-size: 0.78rem;
+  color: #a0c0a0;
+  padding-left: 1em;
+  position: relative;
+  line-height: 1.4;
+}
+
+.hero-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #4afe1e;
+}
+
+.hero-stat {
+  background: rgba(74, 254, 30, 0.06);
+  border: 1px solid #1f3a1f;
+  border-left: 4px solid #4afe1e;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.05rem;
+  color: #c0c0c0;
+  line-height: 1.6;
+}
+
+.hero-stat strong {
+  color: #4afe1e !important;
+}
+
+/* ── Hardware + models merged slide ──────────────────────── */
+.hw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.hw-left,
+.hw-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hw-left pre {
+  font-size: 0.65rem !important;
+  line-height: 1.5 !important;
+  padding: 0.6rem 0.8rem !important;
+}
+
+.hw-callout {
+  background: rgba(74, 254, 30, 0.08);
+  border: 1px solid #4afe1e;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  color: #4afe1e;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 4px 0;
+}
+
+/* ── Tighter layout for dense slides ─────────────────────── */
+.hw-grid p,
+.hw-grid li {
+  font-size: 0.78rem !important;
+  line-height: 1.4 !important;
+}
+
+.hw-grid strong {
+  font-size: 0.82rem !important;
+}
+
+.hw-grid table {
+  font-size: 0.78rem;
+}
+
+.hw-grid th,
+.hw-grid td {
+  padding: 0.25rem 0.5rem;
+}
+
+/* ── 3-column hardware merged slide ──────────────────────── */
+.hw3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+}
+
+.hw3-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hw3-col pre {
+  font-size: 0.62rem !important;
+  line-height: 1.45 !important;
+  padding: 0.5rem 0.7rem !important;
+}
+
+.hw3-col table {
+  font-size: 0.75rem;
+}
+
+.hw3-col th,
+.hw3-col td {
+  padding: 0.2rem 0.45rem;
+}
+
+.hw3-col p,
+.hw3-col li {
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+}
+
+.hw3-col strong {
+  font-size: 0.78rem !important;
+}
+
+/* ── 2-col hardware slide ────────────────────────────────── */
+.hw2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.hw2-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hw2-col pre {
+  font-size: 0.64rem !important;
+  line-height: 1.45 !important;
+  padding: 0.5rem 0.7rem !important;
+}
+
+.hw2-col table { font-size: 0.78rem; }
+.hw2-col th, .hw2-col td { padding: 0.22rem 0.5rem; }
+.hw2-col p, .hw2-col li { font-size: 0.78rem !important; line-height: 1.4 !important; }
+
+/* ── Top Frontiers slide ─────────────────────────────────── */
+.frontiers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 0.8rem 0;
+}
+
+.frontiers-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.frontiers-col h3 {
+  font-size: 1rem !important;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.frontiers-col table { font-size: 0.85rem; }
+.frontiers-col th, .frontiers-col td { padding: 0.3rem 0.6rem; }
+
+.frontiers-col:first-child {
+  border-right: 1px solid #2a2a2a;
+  padding-right: 20px;
+}
+
+.frontiers-col:first-child table td,
+.frontiers-col:first-child table th {
+  color: #888 !important;
+}
+
+.frontiers-col:first-child thead tr {
+  border-bottom-color: #555;
+}
+
+/* ── Blackwell hero block ─────────────────────────────────── */
+.blackwell-hero {
+  display: flex;
+  justify-content: center;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.blackwell-gpu {
+  background: linear-gradient(135deg, #0d1a0d, #1a0d0d);
+  border: 1px solid #e91e8c;
+  border-radius: 10px;
+  padding: 0.7rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.blackwell-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.blackwell-spec {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.blackwell-price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #e91e8c !important;
+  text-decoration: none !important;
+  line-height: 1.2;
+}
+
+.blackwell-sub {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* ── Global footer ───────────────────────────────────────── */
+.slidev-layout .footer {
+  color: #555 !important;
+  font-size: 0.68rem !important;
+}
+
+.slidev-layout .footer a {
+  color: #4afe1e !important;
+  text-decoration: none !important;
+}
+
+/* ── Table source caption ────────────────────────────────── */
+.table-source {
+  font-size: 0.65rem !important;
+  color: #555 !important;
+  text-align: right;
+  margin-top: -4px;
+  margin-bottom: 6px;
+}
+
+.table-source a {
+  color: #4afe1e !important;
+  text-decoration: none !important;
+}

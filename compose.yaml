@@ -1,0 +1,42 @@
+services:
+  aria:
+    build:
+      context: /srv/docker/irc-expo/bots
+    container_name: bot-aria
+    restart: unless-stopped
+    environment:
+      BOT_NAME: Aria
+      IRC_HOST: 192.168.22.27
+      IRC_PORT: "6668"
+      IRC_CHAN: "#nztechexpo"
+      LLM_URL: http://192.168.22.22:4000/v1/chat/completions
+      LLM_KEY: sk-5196c38d39d0472d76385d22de628c11
+      LLM_MODEL: deepseek
+
+  skeptic:
+    build:
+      context: /srv/docker/irc-expo/bots
+    container_name: bot-skeptic
+    restart: unless-stopped
+    environment:
+      BOT_NAME: Skeptic
+      IRC_HOST: 192.168.22.27
+      IRC_PORT: "6668"
+      IRC_CHAN: "#nztechexpo"
+      LLM_URL: http://192.168.22.22:4000/v1/chat/completions
+      LLM_KEY: sk-5196c38d39d0472d76385d22de628c11
+      LLM_MODEL: deepseek
+
+  hal:
+    build:
+      context: /srv/docker/irc-expo/bots
+    container_name: bot-hal
+    restart: unless-stopped
+    environment:
+      BOT_NAME: HAL
+      IRC_HOST: 192.168.22.27
+      IRC_PORT: "6668"
+      IRC_CHAN: "#nztechexpo"
+      LLM_URL: http://192.168.22.22:4000/v1/chat/completions
+      LLM_KEY: sk-5196c38d39d0472d76385d22de628c11
+      LLM_MODEL: deepseek
