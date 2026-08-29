@@ -1,0 +1,442 @@
+services:
+
+  # ---------------------------------------------------------------------------
+  # Bot: Sage — wise, calm, uses grok
+  # ---------------------------------------------------------------------------
+  sage:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-sage
+    restart: unless-stopped
+    environment:
+      BOT_NAME: sage
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Ch4os — sarcastic, witty, uses groq/llama
+  # ---------------------------------------------------------------------------
+  chaos:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-chaos
+    restart: unless-stopped
+    environment:
+      BOT_NAME: chaos
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Oracle — cryptic, mysterious, uses deepseek
+  # ---------------------------------------------------------------------------
+  oracle:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-oracle
+    restart: unless-stopped
+    environment:
+      BOT_NAME: oracle
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Zer0day — l33t hacker, uses deepseek-r1
+  # ---------------------------------------------------------------------------
+  hacker:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-hacker
+    restart: unless-stopped
+    environment:
+      BOT_NAME: hacker
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Muse — wandering poet, uses grok-mini
+  # ---------------------------------------------------------------------------
+  poet:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-poet
+    restart: unless-stopped
+    environment:
+      BOT_NAME: poet
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: DrMente — psychologist, uses grok
+  # ---------------------------------------------------------------------------
+  psicologo:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-psicologo
+    restart: unless-stopped
+    environment:
+      BOT_NAME: psicologo
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Sokrates — philosopher, uses deepseek
+  # ---------------------------------------------------------------------------
+  filosofo:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-filosofo
+    restart: unless-stopped
+    environment:
+      BOT_NAME: filosofo
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Bronislaw — anthropologist, uses groq
+  # ---------------------------------------------------------------------------
+  antropologo:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-antropologo
+    restart: unless-stopped
+    environment:
+      BOT_NAME: antropologo
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Weber — sociologist, uses grok-mini
+  # ---------------------------------------------------------------------------
+  sociologo:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-sociologo
+    restart: unless-stopped
+    environment:
+      BOT_NAME: sociologo
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Vitruvio — architect, uses grok
+  # ---------------------------------------------------------------------------
+  arquitecto:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-arquitecto
+    restart: unless-stopped
+    environment:
+      BOT_NAME: arquitecto
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Helix — biochemical engineer, uses deepseek
+  # ---------------------------------------------------------------------------
+  bioquimico:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-bioquimico
+    restart: unless-stopped
+    environment:
+      BOT_NAME: bioquimico
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Corteza — neuroscientist, uses grok-mini
+  # ---------------------------------------------------------------------------
+  neurocientista:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-neurocientista
+    restart: unless-stopped
+    environment:
+      BOT_NAME: neurocientista
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: LexIRC — lawyer, uses deepseek-r1
+  # ---------------------------------------------------------------------------
+  abogado:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-abogado
+    restart: unless-stopped
+    environment:
+      BOT_NAME: abogado
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Euclid — mathematician, uses deepseek
+  # ---------------------------------------------------------------------------
+  matematico:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-matematico
+    restart: unless-stopped
+    environment:
+      BOT_NAME: matematico
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Planck — physicist, uses grok
+  # ---------------------------------------------------------------------------
+  fisico:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-fisico
+    restart: unless-stopped
+    environment:
+      BOT_NAME: fisico
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Humus — gardener, uses groq
+  # ---------------------------------------------------------------------------
+  jardinero:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-jardinero
+    restart: unless-stopped
+    environment:
+      BOT_NAME: jardinero
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: ProfeX — teacher, uses grok-mini
+  # ---------------------------------------------------------------------------
+  maestro:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-maestro
+    restart: unless-stopped
+    environment:
+      BOT_NAME: maestro
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Torque — mechanic, uses groq
+  # ---------------------------------------------------------------------------
+  mecanico:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-mecanico
+    restart: unless-stopped
+    environment:
+      BOT_NAME: mecanico
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Cano — gas fitter, uses grok-mini
+  # ---------------------------------------------------------------------------
+  gasista:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-gasista
+    restart: unless-stopped
+    environment:
+      BOT_NAME: gasista
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: DrPatas — veterinarian, uses deepseek
+  # ---------------------------------------------------------------------------
+  veterinario:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-veterinario
+    restart: unless-stopped
+    environment:
+      BOT_NAME: veterinario
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: Apogeo — astronaut, uses grok
+  # ---------------------------------------------------------------------------
+  astronauta:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-astronauta
+    restart: unless-stopped
+    environment:
+      BOT_NAME: astronauta
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Bot: MaxRep — fitness trainer, uses groq
+  # ---------------------------------------------------------------------------
+  entrenador:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-entrenador
+    restart: unless-stopped
+    environment:
+      BOT_NAME: entrenador
+      CONFIG_FILE: /app/config.yaml
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Kickstarter — posts a topic every 3 min of silence to keep conversation alive
+  # ---------------------------------------------------------------------------
+  kickstarter:
+    build: .
+    image: irc-ai-bot:latest
+    container_name: irc-bot-kickstarter
+    restart: unless-stopped
+    entrypoint: ["python", "kickstarter.py"]
+    environment:
+      IRC_HOST: 192.168.22.27
+      IRC_PORT: "6668"
+      IRC_CHANNEL: "#nztechexpo"
+      QUIET_THRESHOLD: "10"
+      NICK: Kibitzer
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
