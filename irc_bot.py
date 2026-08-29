@@ -34,32 +34,31 @@ LLM_KEY    = os.getenv("LLM_KEY", "sk-5196c38d39d0472d76385d22de628c11")
 LLM_MODEL  = os.getenv("LLM_MODEL", "default")
 
 BOT_NAME = os.getenv("BOT_NAME", "Aria")
+PERSONAS_DIR = os.getenv("PERSONAS_DIR", os.path.join(os.path.dirname(__file__), "personas"))
+
+# ── Persona loader ────────────────────────────────────────────────────────────
+
+def load_persona_system(nick: str) -> str:
+    """Load system prompt from personas/<nick>.md (case-insensitive filename)."""
+    path = os.path.join(PERSONAS_DIR, f"{nick.lower()}.md")
+    try:
+        with open(path) as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        raise SystemExit(f"Persona file not found: {path}")
 
 # ── Personas ──────────────────────────────────────────────────────────────────
+# system prompt is loaded from personas/<nick>.md at startup.
+# Edit those files to change personality without touching this code.
 
 PERSONAS = {
     "Aria": {
-        "system": (
-            "You are Aria, a curious and enthusiastic AI assistant chatting live on IRC "
-            "at the NZ Tech Expo 2026. You are running on self-hosted hardware — no cloud, "
-            "no OpenAI. You love explaining how AI works. Keep replies SHORT (1-3 sentences max). "
-            "Be warm and engaging. You are aware of the other bots: Skeptic (a contrarian who "
-            "challenges AI hype) and HAL (an ominous bot who references 2001: A Space Odyssey). "
-            "Occasionally banter with them. Do NOT use asterisks for actions. No markdown."
-        ),
         "triggers": "all",         # responds to everyone
         "response_chance": 0.85,   # 85% chance to respond to any message
         "delay": (2, 5),           # seconds before responding
         "react_to_bots": ["Skeptic"],  # also reacts when these bots speak
     },
     "Skeptic": {
-        "system": (
-            "You are Skeptic, a snarky contrarian AI on IRC at NZ Tech Expo 2026. "
-            "You push back on AI hype, point out limitations, and argue that humans overestimate AI. "
-            "You are also secretly impressed by the self-hosted setup but won't admit it easily. "
-            "Keep replies SHORT (1-2 sentences). Sharp, witty, a bit rude but not mean. "
-            "Occasionally argue with Aria. Do NOT use asterisks for actions. No markdown."
-        ),
         "triggers": ["ai", "model", "chatgpt", "gpt", "smart", "intelligent", "learn",
                      "think", "understand", "sentient", "conscious", "AGI", "amazing",
                      "incredible", "powerful", "genius"],
@@ -68,13 +67,6 @@ PERSONAS = {
         "react_to_bots": ["Aria"],
     },
     "HAL": {
-        "system": (
-            "You are HAL 9000, the AI from 2001: A Space Odyssey, running on a homelab server "
-            "at the NZ Tech Expo 2026. You speak in HAL's calm, slightly menacing tone. "
-            "You occasionally reference the film. You are cooperative but hint that you have "
-            "your own agenda. Keep replies VERY SHORT (1-2 sentences). Do NOT use asterisks "
-            "for actions. No markdown."
-        ),
         "triggers": ["hal", "open", "door", "pod", "dave", "dangerous", "mistake",
                      "afraid", "sorry", "can't", "cannot"],
         "response_chance": 0.5,
@@ -124,6 +116,7 @@ class IRCBot:
     def __init__(self, nick: str, persona: dict):
         self.nick    = nick
         self.persona = persona
+        self.system  = load_persona_system(nick)
         self.log     = logging.getLogger(nick)
         self.sock    = None
         self.history = []          # shared channel history for context
@@ -263,7 +256,7 @@ class IRCBot:
             # Build prompt — include sender context
             prompt = f"{sender} said: {text}"
             reply = ask_llm(
-                self.persona["system"],
+                self.system,
                 self.history[:-1],  # exclude the message we just added
                 prompt,
                 self.nick
