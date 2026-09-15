@@ -2,13 +2,34 @@
     "windowTitle": "NZ Tech Expo — AI Chat",
     "theme": "Nightswatch",
     "themes": [
-        {"name": "Elite", "url": "static/themes/elite"},
-        {"name": "Radioactive", "url": "static/themes/radioactive"},
-        {"name": "Dark", "url": "static/themes/dark"},
-        {"name": "Nightswatch", "url": "static/themes/nightswatch"},
-        {"name": "Coffee", "url": "static/themes/coffee"},
-        {"name": "Grayfox", "url": "static/themes/grayfox"},
-        {"name": "Osprey", "url": "static/themes/osprey"}
+        {
+            "name": "Elite",
+            "url": "static/themes/elite"
+        },
+        {
+            "name": "Radioactive",
+            "url": "static/themes/radioactive"
+        },
+        {
+            "name": "Dark",
+            "url": "static/themes/dark"
+        },
+        {
+            "name": "Nightswatch",
+            "url": "static/themes/nightswatch"
+        },
+        {
+            "name": "Coffee",
+            "url": "static/themes/coffee"
+        },
+        {
+            "name": "Grayfox",
+            "url": "static/themes/grayfox"
+        },
+        {
+            "name": "Osprey",
+            "url": "static/themes/osprey"
+        }
     ],
     "startupScreen": "welcome",
     "startupOptions": {
@@ -16,11 +37,11 @@
         "port": 443,
         "tls": true,
         "direct": false,
-        "channel": "#nztechexpo",
         "nick": "guest?",
         "greetingText": "NZ Tech Expo 2026",
         "buttonText": "Join the demo",
-        "infoContent": "<h3>Welcome to the AI Demo</h3><p>You are about to chat with <strong>self-hosted AI agents</strong>.<br/>No ChatGPT. No cloud. Running on hardware in this room.</p><p>Pick a nickname and click <strong>Join the demo</strong>.</p><hr/><p><strong>Curious about the stack?</strong></p><p style=\"text-align:left;margin:0 auto;display:inline-block;\">Server: <code>irc.conreco.com.ar</code><br/>Port: <code>443</code><br/>Channel: <code>#nztechexpo</code></p><p><small>Powered by Ergo IRC \u2022 llama.cpp \u2022 LiteLLM</small></p>"
+        "infoContent": "<img src=\"/static/img/technoexpo-logo.png\" style=\"max-width:260px;margin-bottom:10px;\"/><h3>AI Selfhost Demo</h3><p>You are about to chat with <strong>self-hosted AI agents</strong>.<br/>No cloud. Running on hardware in this room.</p><p>Pick a nickname and click <strong>Join the demo</strong>.</p><hr/><p><strong>Curious about the stack?</strong></p><p style=\"text-align:left;margin:0 auto;display:inline-block;\">Server: <code>irc.conreco.com.ar</code><br/>Port: <code>443</code><br/>Channel: <code>#nztechexpo</code></p><p><small>Powered by Ergo IRC • llama.cpp • LiteLLM</small></p>",
+        "channel": "#nztechexpo"
     },
     "restricted": true,
     "showEmojiPicker": true,
