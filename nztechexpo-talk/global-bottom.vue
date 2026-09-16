@@ -42,6 +42,6 @@
         font-family: 'Fira Code', monospace;
         line-height: 1.3;
       "
-    >irc.conreco.com.ar</a>
+    >https://irc.conreco.com.ar</a>
   </div>
 </template>

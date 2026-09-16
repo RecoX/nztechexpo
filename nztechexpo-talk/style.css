@@ -206,7 +206,7 @@
   margin-top: 1.5rem;
 }
 .model-file-img {
-  height: 180px;
+  height: 320px;
   object-fit: contain;
   border-radius: 12px;
   flex-shrink: 0;
@@ -377,21 +377,91 @@
 }
 
 /* ══════════════════════════════════════════════════════════
+   7b. WHERE TO DOWNLOAD
+══════════════════════════════════════════════════════════ */
+.dl-sources {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.dl-source {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--nz-border);
+  background: var(--nz-darkbg);
+  gap: 0.4rem;
+}
+.dl-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.dl-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--nz-white);
+}
+.dl-url {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: var(--nz-green);
+}
+.dl-desc {
+  font-size: 0.8rem;
+  color: var(--nz-grey);
+  line-height: 1.4;
+  flex: 1;
+}
+.dl-tag {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--nz-green);
+  border: 1px solid var(--nz-green);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+/* ══════════════════════════════════════════════════════════
    8. WHY LLAMA — timeline
 ══════════════════════════════════════════════════════════ */
+.llama-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.llama-left {
+  min-width: 0;
+}
+.llama-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 220px;
+  text-align: center;
+}
 .llama-fun {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 .llama-fun-img {
-  height: 120px;
+  width: 200px;
   border-radius: 12px;
   object-fit: cover;
   border: 2px solid var(--nz-green);
 }
 .llama-fun-text {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--nz-green);
   line-height: 1.5;
@@ -444,3 +514,197 @@
 .infra-item-name { font-weight: 700; color: var(--nz-white); min-width: 8rem; }
 .infra-item-sep  { color: var(--nz-border); }
 .infra-item-desc { color: var(--nz-grey); }
+
+.infra-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+.infra-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--nz-border);
+  background: var(--nz-darkbg);
+  gap: 0.5rem;
+}
+.infra-card-highlight {
+  border-color: var(--nz-green);
+  background: rgba(74,254,30,0.05);
+}
+.infra-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #fff;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.infra-card-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--nz-white);
+}
+.infra-card-desc {
+  font-size: 0.78rem;
+  color: var(--nz-grey);
+  line-height: 1.4;
+}
+
+/* ══════════════════════════════════════════════════════════
+   10. TAKEAWAYS
+══════════════════════════════════════════════════════════ */
+.takeaway-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  align-items: stretch;
+}
+.takeaway-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.takeaway-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+.takeaway-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.9rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--nz-border);
+  background: var(--nz-darkbg);
+}
+.takeaway-card-highlight {
+  border-color: var(--nz-green);
+  background: rgba(74,254,30,0.06);
+}
+.takeaway-card-sovereignty {
+  border-color: var(--nz-green);
+  background: rgba(74,254,30,0.04);
+  align-items: flex-start;
+  padding: 1.5rem 1.25rem;
+}
+.takeaway-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 2.5rem;
+  text-align: center;
+}
+.takeaway-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--nz-green);
+  margin-bottom: 0.2rem;
+}
+.takeaway-desc {
+  font-size: 0.85rem;
+  color: var(--nz-grey);
+  line-height: 1.4;
+}
+
+/* ══════════════════════════════════════════════════════════
+   DOWNLOAD SLIDE — vertical centering
+══════════════════════════════════════════════════════════ */
+.dl-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex: 1;
+  min-height: 0;
+  padding-bottom: 2rem;
+}
+
+.dl-centered .infra-cards {
+  margin-top: 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   THANK YOU SLIDE
+══════════════════════════════════════════════════════════ */
+.thankyou-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.thankyou-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--nz-white);
+  letter-spacing: -0.01em;
+}
+.thankyou-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.thankyou-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.thankyou-link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--nz-green);
+  text-decoration: none;
+}
+.thankyou-link:hover {
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════════════════════
+   DOWNLOAD SLIDE — 3-col override + vertical center
+══════════════════════════════════════════════════════════ */
+.dl-cards {
+  grid-template-columns: repeat(3, 1fr) !important;
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-20%);
+  margin-top: 0 !important;
+}
+
+.dl-subtitle {
+  font-size: 1rem;
+  color: var(--nz-grey);
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   INTRO — QR + URL row
+══════════════════════════════════════════════════════════ */
+.qr-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.qr-img {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+}
+.qr-url {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--nz-green);
+  text-decoration: none;
+  line-height: 1.1;
+  word-break: break-all;
+}

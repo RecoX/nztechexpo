@@ -21,12 +21,9 @@ fonts:
 
 Turn your own devices into AI Servers, simple, secure and accessible for everyone, not just tech experts.
 
-<div class="text-center" style="min-width:200px">
-
-[![QR](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Firc.conreco.com.ar%2F&bgcolor=0a0a0a&color=4afe1e&format=png)](https://irc.conreco.com.ar/)
-
-**[irc.conreco.com.ar](https://irc.conreco.com.ar/)**
-
+<div class="qr-row">
+  <a href="https://irc.conreco.com.ar/"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Firc.conreco.com.ar%2F&bgcolor=0a0a0a&color=4afe1e&format=png" class="qr-img" alt="QR" /></a>
+  <a href="https://irc.conreco.com.ar/" class="qr-url">https://irc.conreco.com.ar</a>
 </div>
 
 *NZ Tech Expo 2026 · Lucas Recoaro*
@@ -34,23 +31,18 @@ Turn your own devices into AI Servers, simple, secure and accessible for everyon
 ---
 
 <!-- ─────────────────────────────────────────────
-  2. WHAT IS AI — question
+  2. WHAT IS AI
 ───────────────────────────────────────────── -->
 
 # What is AI?
 
-<div class="text-center text-5xl my-12">🤔</div>
+<div class="text-center text-5xl my-8">🤔</div>
 
----
+<div v-click>
 
-<!-- ─────────────────────────────────────────────
-  2. WHAT IS AI — answers
-───────────────────────────────────────────── -->
-
-# What is AI?
 ## It depends who you ask.
 
-<table class="ai-table" v-click>
+<table class="ai-table">
   <thead>
     <tr><th></th><th>Who</th><th>What they say</th></tr>
   </thead>
@@ -62,15 +54,11 @@ Turn your own devices into AI Servers, simple, secure and accessible for everyon
   </tbody>
 </table>
 
-<div v-click class="mt-6">
-
-**They're all right.**
-
 </div>
 
-<div v-click>
+<div v-click class="mt-4">
 
-*But today we're talking about running it yourself.*
+**They're all right.** *But today we're talking about running it yourself.*
 
 </div>
 
@@ -124,7 +112,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 # What does owning the hardware give you?
 
 <div class="hero-cards">
-  <div class="hero-card">
+  <div class="hero-card" v-click>
     <div class="hero-icon">🔒</div>
     <div class="hero-title">Privacy</div>
     <div class="hero-sub">Your data never leaves the building</div>
@@ -133,7 +121,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
       <li>No vendor logging</li>
     </ul>
   </div>
-  <div class="hero-card">
+  <div class="hero-card" v-click>
     <div class="hero-icon">💸</div>
     <div class="hero-title">Cost</div>
     <div class="hero-sub">Pay once — not per token</div>
@@ -142,7 +130,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
       <li>Zero surprise bills</li>
     </ul>
   </div>
-  <div class="hero-card">
+  <div class="hero-card" v-click>
     <div class="hero-icon">⚡</div>
     <div class="hero-title">Control</div>
     <div class="hero-sub">You decide everything</div>
@@ -174,10 +162,10 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
   <img src="/images/icon-examples.png" class="model-file-img" alt="Model file examples" />
   <div class="model-file-text">
     A model is just a file.<br/>
-    Like a PDF or an MP3 —<br/>
+    Like a PDF or an MP3,<br/>
     except instead of a document or a song,<br/>
     it contains everything a machine<br/>
-    <span class="strike">learned</span> <strong>processed</strong> from reading the internet.
+    <span class="strike">learned</span> <strong>processed</strong> from a dataset.
   </div>
 </div>
 
@@ -190,7 +178,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 
 <v-click>
 <div class="model-box">
-  <div class="model-icon">[ arch ]</div>
+  <div class="model-icon">🏗️</div>
   <div class="model-content">
     <div class="model-title">Architecture</div>
     <div class="model-desc">The blueprint. Defines the shape — how many layers, how wide, how attention works. It's just a config file.</div>
@@ -200,7 +188,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 
 <v-click>
 <div class="model-box">
-  <div class="model-icon">[ weights ]</div>
+  <div class="model-icon">🧮</div>
   <div class="model-content">
     <div class="model-title">Weights</div>
     <div class="model-desc">Billions of numbers. The result of training — everything the model processed is stored here. This is the big file you download.</div>
@@ -210,7 +198,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 
 <v-click>
 <div class="model-box">
-  <div class="model-icon">[ tokens ]</div>
+  <div class="model-icon">🔤</div>
   <div class="model-content">
     <div class="model-title">Tokeniser</div>
     <div class="model-desc">Converts input into numbers the model can process. Models only ever see numbers.</div>
@@ -220,7 +208,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 
 <v-click>
 <div class="model-box">
-  <div class="model-icon">[ quant ]</div>
+  <div class="model-icon">🗜️</div>
   <div class="model-content">
     <div class="model-title">Quantisation info</div>
     <div class="model-desc">Instructions for how the weights were compressed. Different flavours of the same model, runs on less RAM. Same model, lighter to carry.</div>
@@ -242,25 +230,25 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 <div class="model-shapes">
 
 <div class="model-shape" v-click>
-  <div class="model-shape-icon">[ LLM ]</div>
+  <div class="model-shape-icon">💬</div>
   <div class="model-shape-name">Language</div>
   <div class="model-shape-desc">Text in, text out. Chat, summarise, write, reason, answer questions.</div>
 </div>
 
 <div class="model-shape" v-click>
-  <div class="model-shape-icon">[ audio ]</div>
+  <div class="model-shape-icon">🎙️</div>
   <div class="model-shape-name">Audio</div>
   <div class="model-shape-desc">Speech to text, text to speech, or sound classification.</div>
 </div>
 
 <div class="model-shape" v-click>
-  <div class="model-shape-icon">[ image ]</div>
+  <div class="model-shape-icon">🖼️</div>
   <div class="model-shape-name">Image</div>
   <div class="model-shape-desc">Understand or generate images. Describe a photo, detect objects, create art.</div>
 </div>
 
 <div class="model-shape model-shape-highlight" v-click>
-  <div class="model-shape-icon">[ multi ]</div>
+  <div class="model-shape-icon">🌐</div>
   <div class="model-shape-name">Multimodal</div>
   <div class="model-shape-desc">All of the above in one model. Text, images, audio — send anything, get anything back.</div>
 </div>
@@ -298,7 +286,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
   <div class="model-type-icon">🌍</div>
   <div class="model-type-name">Open Source</div>
   <div class="model-type-examples">OLMo · Falcon · BLOOM</div>
-  <div class="model-type-desc">Weights <em>and</em> training data and code are fully public. True open source — you can reproduce it from scratch.</div>
+  <div class="model-type-desc">Weights <em>and</em> training data and code are fully public. True open source, you can reproduce it from scratch.</div>
   <div class="model-type-tag model-type-green">weights + data + code all public</div>
 </div>
 
@@ -366,50 +354,76 @@ For running locally, <strong>open weight</strong> is what matters most — the w
 ---
 
 <!-- ─────────────────────────────────────────────
+  7b. WHERE CAN I DOWNLOAD A MODEL?
+───────────────────────────────────────────── -->
+
+# Where can I download a model?
+
+<p class="dl-subtitle">Pages and galleries where you can search thousands of models, made by companies and individuals alike.</p>
+
+<div class="infra-cards dl-cards" v-click>
+  <div class="infra-card infra-card-highlight">
+    <img src="/images/ollama.png" class="infra-logo" alt="Ollama" />
+    <div class="infra-card-name">Ollama Library</div>
+    <div class="infra-card-desc">ollama.com/library<br/>Curated models, one command to pull and run. No account needed.</div>
+  </div>
+  <div class="infra-card">
+    <img src="/images/huggingface.png" class="infra-logo" alt="Hugging Face" />
+    <div class="infra-card-name">Hugging Face</div>
+    <div class="infra-card-desc">huggingface.co/models<br/>The largest model hub. Search by task, size, or licence. Download GGUF files.</div>
+  </div>
+  <div class="infra-card">
+    <img src="/images/lmstudio.jpg" class="infra-logo" alt="LM Studio" />
+    <div class="infra-card-name">LM Studio</div>
+    <div class="infra-card-desc">lmstudio.ai<br/>Built-in model browser. Search, download and run — all from a GUI.</div>
+  </div>
+</div>
+
+---
+
+<!-- ─────────────────────────────────────────────
   8. WHY "LLAMA"? + TIMELINE
 ───────────────────────────────────────────── -->
 
 # Why is everything called "Llama"?
 
-<div class="llama-fun" style="margin-bottom: 1.25rem">
-  <img src="/images/la_llama_que_llama.webp" class="llama-fun-img" alt="La llama que llama" />
-  <div class="llama-fun-text">One model name sparked an entire ecosystem.<br/><span style="font-size:1rem; color: var(--nz-grey)">Also… llamas are just fun. 🦙</span></div>
-</div>
-
-<div class="timeline">
-
-<div class="tl-item" v-click>
-  <div class="tl-date">Nov 30, 2022</div>
-  <div class="tl-body">
-    <div class="tl-title">ChatGPT launches</div>
-    <div class="tl-desc">The world realises AI is real and powerful. But it's closed — you can't run it yourself.</div>
+<div class="llama-layout">
+  <div class="llama-left">
+    <div class="timeline">
+    <div class="tl-item" v-click>
+      <div class="tl-date">Nov 30, 2022</div>
+      <div class="tl-body">
+        <div class="tl-title">ChatGPT launches</div>
+        <div class="tl-desc">The world realises AI is real and powerful. But it's closed — you can't run it yourself.</div>
+      </div>
+    </div>
+    <div class="tl-item" v-click>
+      <div class="tl-date">Feb 24, 2023</div>
+      <div class="tl-body">
+        <div class="tl-title">Meta releases LLaMA</div>
+        <div class="tl-desc">Research-only — but the weights leak online within days. The open source community suddenly has a powerful model to work with.</div>
+      </div>
+    </div>
+    <div class="tl-item tl-highlight" v-click>
+      <div class="tl-date">Mar 10, 2023</div>
+      <div class="tl-body">
+        <div class="tl-title">llama.cpp is born</div>
+        <div class="tl-desc">Georgi Gerganov builds <strong>llama.cpp</strong> in a weekend — run LLaMA on a regular laptop, no expensive GPU needed.</div>
+      </div>
+    </div>
+    <div class="tl-item tl-highlight" v-click>
+      <div class="tl-date">Jul 8, 2023</div>
+      <div class="tl-body">
+        <div class="tl-title">Ollama launches</div>
+        <div class="tl-desc"><strong>Ollama</strong> wraps llama.cpp into one command. Suddenly anyone can run AI locally.</div>
+      </div>
+    </div>
+    </div>
   </div>
-</div>
-
-<div class="tl-item" v-click>
-  <div class="tl-date">Feb 24, 2023</div>
-  <div class="tl-body">
-    <div class="tl-title">Meta releases LLaMA</div>
-    <div class="tl-desc">Research-only — but the weights leak online within days. The open AI community suddenly has a powerful model to work with.</div>
+  <div class="llama-right" v-click>
+    <img src="/images/la_llama_que_llama.webp" class="llama-fun-img" alt="La llama que llama" />
+    <div class="llama-fun-text">One model name sparked an entire ecosystem.<br/><span style="font-size:1rem; color: var(--nz-grey)">Also… llamas are just fun. 🦙</span></div>
   </div>
-</div>
-
-<div class="tl-item tl-highlight" v-click>
-  <div class="tl-date">Mar 10, 2023</div>
-  <div class="tl-body">
-    <div class="tl-title">llama.cpp is born</div>
-    <div class="tl-desc">Georgi Gerganov builds <strong>llama.cpp</strong> in a weekend — run LLaMA on a regular laptop, no expensive GPU needed.</div>
-  </div>
-</div>
-
-<div class="tl-item tl-highlight" v-click>
-  <div class="tl-date">Jul 8, 2023</div>
-  <div class="tl-body">
-    <div class="tl-title">Ollama launches</div>
-    <div class="tl-desc"><strong>Ollama</strong> wraps llama.cpp into one command. Suddenly anyone can run AI locally.</div>
-  </div>
-</div>
-
 </div>
 
 ---
@@ -425,26 +439,26 @@ For running locally, <strong>open weight</strong> is what matters most — the w
   That's it. The model is just a file on your disk. The software loads it into your hardware and runs it.
 </div>
 
-<div class="infra-list" v-click>
-  <div class="infra-item">
-    <span class="infra-item-name">llama.cpp</span>
-    <span class="infra-item-sep">—</span>
-    <span class="infra-item-desc">command line</span>
+<div class="infra-cards" v-click>
+  <div class="infra-card">
+    <img src="/images/llamacpp.png" class="infra-logo" alt="llama.cpp" />
+    <div class="infra-card-name">llama.cpp</div>
+    <div class="infra-card-desc">Command line. Runs anywhere — even CPU only.</div>
   </div>
-  <div class="infra-item" style="color: var(--nz-green)">
-    <span class="infra-item-name">Ollama</span>
-    <span class="infra-item-sep">—</span>
-    <span class="infra-item-desc">one command, runs as a local server</span>
+  <div class="infra-card infra-card-highlight">
+    <img src="/images/ollama.png" class="infra-logo" alt="Ollama" />
+    <div class="infra-card-name">Ollama</div>
+    <div class="infra-card-desc">One command. Runs as a local API server.</div>
   </div>
-  <div class="infra-item">
-    <span class="infra-item-name">LM Studio</span>
-    <span class="infra-item-sep">—</span>
-    <span class="infra-item-desc">desktop app with a GUI</span>
+  <div class="infra-card">
+    <img src="/images/lmstudio.jpg" class="infra-logo" alt="LM Studio" />
+    <div class="infra-card-name">LM Studio</div>
+    <div class="infra-card-desc">Desktop app with a full GUI.</div>
   </div>
-  <div class="infra-item">
-    <span class="infra-item-name">Jan</span>
-    <span class="infra-item-sep">—</span>
-    <span class="infra-item-desc">desktop app, open source</span>
+  <div class="infra-card">
+    <img src="/images/Jan.jpg" class="infra-logo" alt="Jan" />
+    <div class="infra-card-name">Jan</div>
+    <div class="infra-card-desc">Desktop app, fully open source.</div>
   </div>
 </div>
 
@@ -455,16 +469,51 @@ For running locally, <strong>open weight</strong> is what matters most — the w
   10. TAKEAWAYS
 ───────────────────────────────────────────── -->
 
-# What to take away from today
+# Take away
 
-<v-clicks>
-
-- **AI is not magic** — it's a file of numbers predicting the next word
-- **You don't need the cloud** — small models run on hardware you already own
-- **Open weight models are good enough** — for most real-world tasks
-- **Privacy + cost + control** — three problems solved at once
-
-</v-clicks>
+<div class="takeaway-layout">
+<div class="takeaway-left">
+<div class="takeaway-card" v-click>
+  <div class="takeaway-icon">🔢</div>
+  <div class="takeaway-content">
+    <div class="takeaway-title">AI is not magic</div>
+    <div class="takeaway-desc">It's a file of numbers predicting the next word. That's it.</div>
+  </div>
+</div>
+<div class="takeaway-card" v-click>
+  <div class="takeaway-icon">🖥️</div>
+  <div class="takeaway-content">
+    <div class="takeaway-title">You don't need the cloud</div>
+    <div class="takeaway-desc">Small models run on hardware you already own.</div>
+  </div>
+</div>
+<div class="takeaway-card" v-click>
+  <div class="takeaway-icon">⚖️</div>
+  <div class="takeaway-content">
+    <div class="takeaway-title">Open weight models are good enough</div>
+    <div class="takeaway-desc">For most real-world tasks, open models match or beat cloud quality.</div>
+  </div>
+</div>
+<div class="takeaway-card takeaway-card-highlight" v-click>
+  <div class="takeaway-icon">🔒</div>
+  <div class="takeaway-content">
+    <div class="takeaway-title">Privacy + cost + control</div>
+    <div class="takeaway-desc">Three problems solved at once — just by owning your hardware.</div>
+  </div>
+</div>
+</div>
+<div class="takeaway-card takeaway-card-sovereignty" v-click>
+  <div class="takeaway-icon">🌏</div>
+  <div class="takeaway-content">
+    <div class="takeaway-title">Data sovereignty matters</div>
+    <div class="takeaway-desc">
+      <strong>🏢 Company:</strong> your IP, trade secrets, and client data never leave your walls.<br/><br/>
+      <strong>🏛️ National:</strong> sensitive data stays under your laws — not on a server in another jurisdiction.<br/><br/>
+      <strong>🔬 Critical domains:</strong> in medicine, justice, and defence, you need to audit the model <em>and</em> the data it was trained on. A black-box cloud model can't give you that. Open weight + open dataset = reproducible, inspectable, accountable AI.
+    </div>
+  </div>
+</div>
+</div>
 
 ---
 
@@ -472,8 +521,16 @@ For running locally, <strong>open weight</strong> is what matters most — the w
   11. END / CONTACT
 ───────────────────────────────────────────── -->
 
-# Thank you! - Tēnā koutou.
+# Thank you! — Tēnā koutou.
 
-- **Lucas Recoaro**
-- **lucas@conreco.com.ar**
-- **https://www.conreco.com.ar**
+<div class="thankyou-wrap">
+  <div class="thankyou-name">Lucas Recoaro</div>
+  <div class="thankyou-row">
+    <span class="thankyou-icon">✉️</span>
+    <a href="mailto:lucas@conreco.com.ar" class="thankyou-link">lucas@conreco.com.ar</a>
+  </div>
+  <div class="thankyou-row">
+    <span class="thankyou-icon">🌐</span>
+    <a href="https://www.conreco.com.ar" class="thankyou-link">www.conreco.com.ar</a>
+  </div>
+</div>
