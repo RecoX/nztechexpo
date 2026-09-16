@@ -55,10 +55,10 @@ Turn your own devices into AI Servers, simple, secure and accessible for everyon
     <tr><th></th><th>Who</th><th>What they say</th></tr>
   </thead>
   <tbody>
-    <tr><td>👔</td><td>A CEO</td><td>"A productivity multiplier for my team"</td></tr>
-    <tr><td>👨‍⚕️</td><td>A doctor</td><td>"A tool that helps me diagnose faster"</td></tr>
-    <tr><td>🔬</td><td>A researcher</td><td>"Statistical pattern matching on massive datasets"</td></tr>
-    <tr><td>👨‍💻</td><td>A developer</td><td>"A process I can call and add into my other software"</td></tr>
+    <tr><td>CEO</td><td>A CEO</td><td>"A productivity multiplier for my team"</td></tr>
+    <tr><td>Doctor</td><td>A doctor</td><td>"A tool that helps me diagnose faster"</td></tr>
+    <tr><td>Researcher</td><td>A researcher</td><td>"Statistical pattern matching on massive datasets"</td></tr>
+    <tr><td>Developer</td><td>A developer</td><td>"A process I can call and add into my other software"</td></tr>
   </tbody>
 </table>
 
@@ -85,7 +85,7 @@ Turn your own devices into AI Servers, simple, secure and accessible for everyon
 
 <div class="cake-grid">
   <div class="cake-row active">
-    <div class="cake-layer">🛠️ APPLICATIONS</div>
+    <div class="cake-layer">✨ APPLICATIONS</div>
     <div class="cake-desc">IRC bots · AI agents · coding assistants · chat apps · your own tools</div>
     <div class="cake-tag">👈 WE BUILD HERE</div>
   </div>
@@ -118,10 +118,10 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 ---
 
 <!-- ─────────────────────────────────────────────
-  4. WHAT DOES OWNING THE INFRASTRUCTURE GIVE YOU?
+  4. WHAT DOES OWNING THE hardware GIVE YOU?
 ───────────────────────────────────────────── -->
 
-# What does owning the infrastructure give you?
+# What does owning the hardware give you?
 
 <div class="hero-cards">
   <div class="hero-card">
@@ -130,17 +130,16 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
     <div class="hero-sub">Your data never leaves the building</div>
     <ul class="hero-bullets">
       <li>Prompts stay on your network</li>
-      <li>No vendor logging your queries</li>
-      <li>GDPR / compliance friendly</li>
+      <li>No vendor logging</li>
     </ul>
   </div>
   <div class="hero-card">
     <div class="hero-icon">💸</div>
     <div class="hero-title">Cost</div>
-    <div class="hero-sub">Pay once — not per token, forever</div>
+    <div class="hero-sub">Pay once — not per token</div>
     <ul class="hero-bullets">
       <li>Break-even in weeks vs. API</li>
-      <li>Unlimited calls, zero surprise bills</li>
+      <li>Zero surprise bills</li>
     </ul>
   </div>
   <div class="hero-card">
@@ -150,7 +149,6 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
     <ul class="hero-bullets">
       <li>Swap models in seconds</li>
       <li>No rate limits or outages</li>
-      <li>Fine-tune on your own data</li>
     </ul>
   </div>
 </div>
@@ -173,7 +171,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 # What is a model?
 
 <div class="model-file-opener" v-click>
-  <div class="model-file-icon">💾</div>
+  <img src="/images/icon-examples.png" class="model-file-img" alt="Model file examples" />
   <div class="model-file-text">
     A model is just a file.<br/>
     Like a PDF or an MP3 —<br/>
@@ -281,7 +279,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 <div class="model-types">
 
 <div class="model-type" v-click>
-  <div class="model-type-icon">[ closed ]</div>
+  <div class="model-type-icon">🔐</div>
   <div class="model-type-name">Proprietary / Closed</div>
   <div class="model-type-examples">GPT-4 · Claude · Gemini</div>
   <div class="model-type-desc">You send your data to their servers. You can't download or inspect the weights. Pay per use.</div>
@@ -289,7 +287,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 </div>
 
 <div class="model-type" v-click>
-  <div class="model-type-icon">[ open-w ]</div>
+  <div class="model-type-icon">⚖️</div>
   <div class="model-type-name">Open Weight</div>
   <div class="model-type-examples">Llama 3 · Mistral · Qwen · Phi</div>
   <div class="model-type-desc">Weights are public — you can download and run locally. But the training data and full process aren't disclosed.</div>
@@ -297,7 +295,7 @@ You can join the **top three layers** for the cost of a **second-hand GPU**.
 </div>
 
 <div class="model-type" v-click>
-  <div class="model-type-icon">[ open-s ]</div>
+  <div class="model-type-icon">🌍</div>
   <div class="model-type-name">Open Source</div>
   <div class="model-type-examples">OLMo · Falcon · BLOOM</div>
   <div class="model-type-desc">Weights <em>and</em> training data and code are fully public. True open source — you can reproduce it from scratch.</div>
